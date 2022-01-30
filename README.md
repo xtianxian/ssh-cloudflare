@@ -1,4 +1,4 @@
-sudo apt install stunnel dropbear gcc make cmake build-essential python unzip zip net-tools python
+sudo apt install stunnel dropbear gcc make cmake build-essential python unzip zip net-tools python libpam-cracklib -y
 
 sudo nano /etc/default/dropbear
 
@@ -51,8 +51,6 @@ tmux
 badvpn-udpgw --listen-addr 127.0.0.1:7300 --max-clients 250 --max-connections-for-client 3
 
 CTRL B D
-
-sudo apt-get install -y libpam-cracklib
 
 sudo useradd -M username -s /bin/false
 
