@@ -2,7 +2,7 @@ sudo apt install stunnel dropbear gcc make cmake build-essential python unzip zi
 
 sudo nano /etc/default/dropbear
 
-sudo nano /etc/banner.dat
+wget https://raw.githubusercontent.com/xtianxian/ssh-cloudflare/main/banner.dat -O /etc/banner.dat
 
 wget https://raw.githubusercontent.com/xtianxian/ssh-cloudflare/main/stunnel.pem -O /etc/stunnel/stunnel.pem
 
@@ -11,8 +11,6 @@ wget https://raw.githubusercontent.com/xtianxian/ssh-cloudflare/main/stunnel.con
 nano /etc/default/stunnel4
 
 /etc/init.d/stunnel4 restart
-
-netstat -tulpn
 
 cd $HOME
 
