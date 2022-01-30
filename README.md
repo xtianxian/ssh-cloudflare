@@ -40,3 +40,15 @@ cd $HOME
 
 wget https://raw.githubusercontent.com/xtianxian/ssh-cloudflare/main/PDirect.py
 
+tmux
+
+python PDirect.py 80
+
+CTRL B D
+
+tmux
+
+badvpn-udpgw --listen-addr 127.0.0.1:7300 --max-clients 250 --max-connections-for-client 3
+
+CTRL B D
+
