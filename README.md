@@ -19,3 +19,22 @@ nano /etc/default/stunnel4
 /etc/init.d/stunnel4 restart
 
 netstat -tulpn
+
+cd $HOME
+
+wget https://github.com/ambrop72/badvpn/archive/master.zip
+
+unzip master.zip
+
+cd badvpn-master/
+
+mkdir build
+
+cd build
+
+cmake .. -DBUILD_NOTHING_BY_DEFAULT=1 -DBUILD_UDPGW=1
+
+sudo make install
+
+cd $HOME
+
