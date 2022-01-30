@@ -4,15 +4,9 @@ sudo nano /etc/default/dropbear
 
 sudo nano /etc/banner.dat
 
-cd /etc/stunnel
+wget https://raw.githubusercontent.com/xtianxian/ssh-cloudflare/main/stunnel.pem -O /etc/stunnel/stunnel.pem
 
-openssl genrsa -out key.pem 2048
-
-openssl req -new -x509 -key key.pem -out cert.pem -days 1095
-
-cat key.pem cert.pem > /etc/stunnel/stunnel.pem
-
-wget https://raw.githubusercontent.com/xtianxian/ssh-cloudflare/main/stunnel.conf
+wget https://raw.githubusercontent.com/xtianxian/ssh-cloudflare/main/stunnel.conf -O /etc/stunnel/stunnel.conf
 
 nano /etc/default/stunnel4
 
