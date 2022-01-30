@@ -40,8 +40,6 @@ wget https://raw.githubusercontent.com/xtianxian/ssh-cloudflare/main/udpgw.servi
 
 sudo systemctl daemon-reload
 
-sudo useradd -m udpgw
-
 sudo systemctl enable udpgw.service
 
 sudo systemctl start udpgw.service
@@ -53,8 +51,6 @@ wget https://raw.githubusercontent.com/xtianxian/ssh-cloudflare/main/PDirect.py 
 wget https://raw.githubusercontent.com/xtianxian/ssh-cloudflare/main/PDirect.service -O /etc/systemd/system/PDirect.service
 
 sudo systemctl daemon-reload
-
-sudo useradd -m PDirect
 
 sudo systemctl enable PDirect.service
 
