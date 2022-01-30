@@ -36,21 +36,29 @@ cmake .. -DBUILD_NOTHING_BY_DEFAULT=1 -DBUILD_UDPGW=1
 
 sudo make install
 
+wget https://raw.githubusercontent.com/xtianxian/ssh-cloudflare/main/udpgw.service -O /etc/systemd/system/udpgw.service
+
+sudo systemctl daemon-reload
+
+sudo useradd -m udpgw
+
+sudo systemctl enable udpgw.service
+
+sudo systemctl start udpgw.service
+
 cd $HOME
 
-wget https://raw.githubusercontent.com/xtianxian/ssh-cloudflare/main/PDirect.py
+wget https://raw.githubusercontent.com/xtianxian/ssh-cloudflare/main/PDirect.py -O /home/ubuntu/PDirect.py
 
-tmux
+wget https://raw.githubusercontent.com/xtianxian/ssh-cloudflare/main/PDirect.service -O /etc/systemd/system/PDirect.service
 
-python PDirect.py 80
+sudo systemctl daemon-reload
 
-CTRL B D
+sudo useradd -m PDirect
 
-tmux
+sudo systemctl enable PDirect.service
 
-badvpn-udpgw --listen-addr 127.0.0.1:7300 --max-clients 250 --max-connections-for-client 3
-
-CTRL B D
+sudo systemctl start PDirect.service
 
 sudo useradd -M username -s /bin/false
 
