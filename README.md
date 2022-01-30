@@ -1,4 +1,4 @@
-sudo apt install stunnel dropbear gcc make cmake build-essential python unzip zip net-tools
+sudo apt install stunnel dropbear gcc make cmake build-essential python unzip zip net-tools python
 
 sudo nano /etc/default/dropbear
 
@@ -12,7 +12,7 @@ openssl req -new -x509 -key key.pem -out cert.pem -days 1095
 
 cat key.pem cert.pem > /etc/stunnel/stunnel.pem
 
-wget https://github.com/xtianxian/ssh-cloudflare/blob/main/stunnel.conf
+wget https://raw.githubusercontent.com/xtianxian/ssh-cloudflare/main/stunnel.conf
 
 nano /etc/default/stunnel4
 
@@ -37,4 +37,6 @@ cmake .. -DBUILD_NOTHING_BY_DEFAULT=1 -DBUILD_UDPGW=1
 sudo make install
 
 cd $HOME
+
+wget https://raw.githubusercontent.com/xtianxian/ssh-cloudflare/main/PDirect.py
 
