@@ -52,3 +52,14 @@ badvpn-udpgw --listen-addr 127.0.0.1:7300 --max-clients 250 --max-connections-fo
 
 CTRL B D
 
+sudo useradd -M testing -s /bin/false
+
+sudo nano /etc/pam.d/common-password
+
+#Add this line
+password        requisite                       pam_cracklib.so retry=3 minlen=8 difok=3 dictpath=/usr/share/dict/common
+
+
+
+
+
