@@ -52,4 +52,7 @@ sudo useradd -M username -s /bin/false
 
 sudo passwd username
 
+echo /bin/false >> /etc/shells
+echo /usr/sbin/nologin >> /etc/shells
+
 sudo shutdown -r now
