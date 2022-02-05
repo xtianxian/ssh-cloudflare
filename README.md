@@ -1,6 +1,6 @@
 sudo apt install stunnel dropbear gcc make cmake build-essential python unzip zip net-tools python libpam-cracklib -y
 
-sudo nano /etc/default/dropbear
+wget https://raw.githubusercontent.com/xtianxian/ssh-cloudflare/main/dropbear -O /etc/default/dropbear
 
 wget https://raw.githubusercontent.com/xtianxian/ssh-cloudflare/main/banner.dat -O /etc/banner.dat
 
