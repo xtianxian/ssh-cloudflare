@@ -2,11 +2,13 @@
 Description=PDirect Service
 After=multi-user.target
 StartLimitIntervalSec=0
+
 [Service]
 Type=simple
 WorkingDirectory=/home/ubuntu
-ExecStart=/urs/bin/python /home/ubuntu/PDirect.py
+ExecStart=/usr/bin/python /home/ubuntu/PDirect.py
 Restart=always
 RestartSec=15
+
 [Install]
 WantedBy=multi-user.target
