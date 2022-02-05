@@ -8,7 +8,7 @@ wget https://raw.githubusercontent.com/xtianxian/ssh-cloudflare/main/stunnel.pem
 
 wget https://raw.githubusercontent.com/xtianxian/ssh-cloudflare/main/stunnel.conf -O /etc/stunnel/stunnel.conf
 
-nano /etc/default/stunnel4
+wget https://raw.githubusercontent.com/xtianxian/ssh-cloudflare/main/stunnel4 -O /etc/default/stunnel4
 
 /etc/init.d/stunnel4 restart
 
