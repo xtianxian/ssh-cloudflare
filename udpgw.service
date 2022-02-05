@@ -1,12 +1,14 @@
 [Unit]
-Description=BadVPN UDPGW Service
+Description=UDP forwarding for badvpn-tun2socks
 After=multi-user.target
 StartLimitIntervalSec=0
+
 [Service]
 WorkingDirectory=/home/ubuntu
-ExecStart=badvpn-udpgw --listen-addr 127.0.0.1:7300 --max-clients 250 --max-connections-for-client 3
-ExecStop=pkill badvpn-udpgw
+ExecStart=/usr/local/bin/badvpn-udpgw --listen-addr 127.0.0.1:7300 --max-clients 250 --max-connections-for-client 3
+ExecStop=/usr/bin/pkill badvpn-udpgw
 Restart=always
 RestartSec=15
+
 [Install]
 WantedBy=multi-user.target
