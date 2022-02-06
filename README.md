@@ -10,6 +10,8 @@ wget https://raw.githubusercontent.com/xtianxian/ssh-cloudflare/main/stunnel.con
 
 wget https://raw.githubusercontent.com/xtianxian/ssh-cloudflare/main/stunnel4 -O /etc/default/stunnel4
 
+chmod o-r /etc/stunnel/stunnel.pem
+
 /etc/init.d/stunnel4 restart
 
 cd $HOME
