@@ -1,4 +1,4 @@
-sudo apt install stunnel dropbear gcc make cmake build-essential python unzip zip net-tools python libpam-cracklib -y
+sudo apt install stunnel dropbear gcc make cmake build-essential python unzip zip net-tools python libpam-cracklib squid -y
 
 wget https://raw.githubusercontent.com/xtianxian/ssh-cloudflare/main/dropbear -O /etc/default/dropbear
 
@@ -9,6 +9,8 @@ wget https://raw.githubusercontent.com/xtianxian/ssh-cloudflare/main/stunnel.pem
 wget https://raw.githubusercontent.com/xtianxian/ssh-cloudflare/main/stunnel.conf -O /etc/stunnel/stunnel.conf
 
 wget https://raw.githubusercontent.com/xtianxian/ssh-cloudflare/main/stunnel4 -O /etc/default/stunnel4
+
+wget https://raw.githubusercontent.com/xtianxian/ssh-cloudflare/main/squid.conf -O /etc/squid/squid.conf
 
 chmod o-r /etc/stunnel/stunnel.pem
 
