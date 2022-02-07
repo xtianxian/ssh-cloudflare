@@ -22,6 +22,7 @@ wget https://raw.githubusercontent.com/xtianxian/ssh-cloudflare/main/stunnel.pem
 wget https://raw.githubusercontent.com/xtianxian/ssh-cloudflare/main/stunnel.conf -O /etc/stunnel/stunnel.conf
 wget https://raw.githubusercontent.com/xtianxian/ssh-cloudflare/main/stunnel4 -O /etc/default/stunnel4
 wget https://raw.githubusercontent.com/xtianxian/ssh-cloudflare/main/squid.conf -O /etc/squid/squid.conf
+systemctl enable squid
 chmod o-r /etc/stunnel/stunnel.pem
 /etc/init.d/stunnel4 restart
 cd $HOME
