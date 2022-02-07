@@ -14,7 +14,7 @@ sudo apt install net-tools -y
 sudo apt install python -y
 sudo apt install libpam-cracklib -y
 sudo apt install squid -y
-sudo apt install ptables-persistent -y
+sudo apt install iptables-persistent -y
 wget https://raw.githubusercontent.com/xtianxian/ssh-cloudflare/main/dropbear -O /etc/default/dropbear
 wget https://raw.githubusercontent.com/xtianxian/ssh-cloudflare/main/banner.dat -O /etc/banner.dat
 wget https://raw.githubusercontent.com/xtianxian/ssh-cloudflare/main/stunnel.pem -O /etc/stunnel/stunnel.pem
