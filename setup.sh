@@ -16,13 +16,17 @@ sudo apt install python -y
 sudo apt install libpam-cracklib -y
 sudo apt install squid -y
 sudo apt install iptables-persistent -y
+sudo apt install apache2 -y
 wget https://raw.githubusercontent.com/xtianxian/ssh-cloudflare/main/dropbear -O /etc/default/dropbear
 wget https://raw.githubusercontent.com/xtianxian/ssh-cloudflare/main/banner.dat -O /etc/banner.dat
 wget https://raw.githubusercontent.com/xtianxian/ssh-cloudflare/main/stunnel.pem -O /etc/stunnel/stunnel.pem
 wget https://raw.githubusercontent.com/xtianxian/ssh-cloudflare/main/stunnel.conf -O /etc/stunnel/stunnel.conf
 wget https://raw.githubusercontent.com/xtianxian/ssh-cloudflare/main/stunnel4 -O /etc/default/stunnel4
 wget https://raw.githubusercontent.com/xtianxian/ssh-cloudflare/main/squid.conf -O /etc/squid/squid.conf
+wget https://raw.githubusercontent.com/xtianxian/ssh-cloudflare/main/ports.conf -O /etc/apache2/ports.conf
+wget https://raw.githubusercontent.com/xtianxian/ssh-cloudflare/main/000-default.conf -O /etc/apache2/sites-enabled/000-default.conf
 systemctl enable squid
+systemctl enable apache2
 chmod o-r /etc/stunnel/stunnel.pem
 /etc/init.d/stunnel4 restart
 cd $HOME
