@@ -25,6 +25,7 @@ wget https://raw.githubusercontent.com/xtianxian/ssh-cloudflare/main/stunnel4 -O
 wget https://raw.githubusercontent.com/xtianxian/ssh-cloudflare/main/squid.conf -O /etc/squid/squid.conf
 wget https://raw.githubusercontent.com/xtianxian/ssh-cloudflare/main/ports.conf -O /etc/apache2/ports.conf
 wget https://raw.githubusercontent.com/xtianxian/ssh-cloudflare/main/000-default.conf -O /etc/apache2/sites-enabled/000-default.conf
+a2enmod headers
 systemctl enable squid
 systemctl enable apache2
 chmod o-r /etc/stunnel/stunnel.pem
